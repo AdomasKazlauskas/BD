@@ -1,11 +1,12 @@
 import "./App.scss";
 import Header from "./components/Header";
+import Hero from "./components/Hero";
 
 function App() {
   return (
     <div>
       <Header />
-      <section>hero</section>
+      <Hero />
       <section>how it works</section>
       <section>add a new story</section>
       <section>story list</section>

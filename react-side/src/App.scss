@@ -1,8 +1,13 @@
 .header-container {
   display: flex;
   align-items: center;
-  padding: 20px;
+  padding: 5px 0px;
   justify-content: center;
+  position: fixed;
+  z-index: 10;
+  width: 100%;
+  background-color: #fff;
+  box-shadow: 0px 5px 15px -2px rgb(255, 255, 255);
 }
 
 .header-links {
@@ -12,7 +17,7 @@
 }
 
 .logotype {
-  width: 20%;
+  width: 300px;
 }
 
 .header-button {
@@ -31,5 +36,37 @@
   cursor: pointer;
   &:hover {
     background-size: 0 3px, 100% 3px;
+  }
+}
+
+.hero-background {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 960px;
+}
+
+.hero-text {
+  margin-top: 50px;
+  color: #fff;
+  width: 420px;
+  font-weight: 750;
+  font-size: 50px;
+  text-align: center;
+}
+
+.hero-button {
+  color: #3d84a8;
+  font-weight: 600;
+  font-size: medium;
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: none;
+  background: white;
+  cursor: pointer;
+  &:hover {
+    box-shadow: 3px 3px 3px darkgray;
+    transition: 0.5s;
   }
 }
