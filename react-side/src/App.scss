@@ -13,11 +13,12 @@
 .header-links {
   display: flex;
   align-items: center;
-  gap: 30px;
+  gap: 100px;
 }
 
 .logotype {
   width: 300px;
+  margin: 0px 100px 0px 60px;
 }
 
 .header-button {
@@ -69,4 +70,61 @@
     box-shadow: 3px 3px 3px darkgray;
     transition: 0.5s;
   }
+}
+
+.howItWorks-header {
+  display: flex;
+  flex-direction: column;
+  justify-items: left;
+  --w: 1200px;
+  width: var(--w);
+  margin: 0 calc((100% - var(--w)) / 2);
+}
+
+.section-name {
+  color: #92bbcf;
+  margin: 60px 0px 0px 0px;
+}
+
+.section-title {
+  color: #3d84a8;
+}
+
+.howItWorks-card-list {
+  display: flex;
+  flex-direction: row;
+  justify-items: center;
+  --w: 1200px;
+  width: var(--w);
+  margin: 20px calc((100% - var(--w)) / 2);
+  justify-content: space-between;
+}
+
+.howItWorks-card {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  padding: 10px 20px;
+  border-radius: 15px;
+  width: 350px;
+  border: 3px solid #fff;
+  &:hover {
+    border: 3px solid #166289;
+  }
+}
+
+.one {
+  background-color: #c9dbe4;
+}
+
+.two {
+  background-color: #92bbcf;
+}
+
+.three {
+  background-color: #3d84a8;
+}
+
+.how-card-name {
+  margin: 20px 0px 0px 0px;
 }
