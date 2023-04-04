@@ -14,17 +14,17 @@ function FundraiseFor() {
         <button className="fundraise-for-button">
           <img className="fundraiser-icon" src={hand} alt="hand" />
           <h2>Yourself</h2>
-          <h1>&rarr;</h1>
+          <h1 className="fundraise-arrow">&rarr;</h1>
         </button>
         <button className="fundraise-for-button">
           <img className="fundraiser-icon" src={hands} alt="hands" />
           <h2>Community</h2>
-          <h1>&rarr;</h1>
+          <h1 className="fundraise-arrow">&rarr;</h1>
         </button>
         <button className="fundraise-for-button">
           <img className="fundraiser-icon" src={charity} alt="charity" />
           <h2>Charity</h2>
-          <h1>&rarr;</h1>
+          <h1 className="fundraise-arrow">&rarr;</h1>
         </button>
       </div>
     </>

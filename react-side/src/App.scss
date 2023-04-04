@@ -37,6 +37,7 @@
   cursor: pointer;
   &:hover {
     background-size: 0 3px, 100% 3px;
+    transition: all 0.6s ease-out;
   }
 }
 
@@ -67,7 +68,7 @@
   background: white;
   cursor: pointer;
   &:hover {
-    box-shadow: 3px 3px 3px darkgray;
+    box-shadow: 3px 3px 3px #166289;
     transition: 0.5s;
   }
 }
@@ -110,6 +111,7 @@
   border: 3px solid #fff;
   &:hover {
     border: 3px solid #166289;
+    transition: all 0.9s ease-out;
     cursor: pointer;
   }
 }
@@ -145,7 +147,10 @@
   flex-direction: column;
   justify-content: center;
   & .section-name {
-    margin: 30px 0px 0px 0px;
+    margin: 150px 0px 0px 0px;
+  }
+  & .section-title {
+    margin-bottom: 100px;
   }
 }
 
@@ -171,7 +176,15 @@
   }
 }
 
+.fundraise-for-button h2 {
+  margin: 20px 0px 0px 0px;
+}
+
 .fundraiser-icon {
   width: 150px;
   margin: 40px 0px;
+}
+
+.fundraise-arrow {
+  margin: 20px 0px 10px 0px;
 }
