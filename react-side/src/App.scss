@@ -7,7 +7,7 @@
   z-index: 10;
   width: 100%;
   background-color: #fff;
-  box-shadow: 0px 5px 15px -2px rgb(255, 255, 255);
+  box-shadow: 0px 5px 20px -2px lightgray;
 }
 
 .header-links {
@@ -110,21 +110,68 @@
   border: 3px solid #fff;
   &:hover {
     border: 3px solid #166289;
+    cursor: pointer;
   }
 }
 
 .one {
-  background-color: #c9dbe4;
+  background: linear-gradient(to right, #c9dbe4, #92bbcf);
 }
 
 .two {
-  background-color: #92bbcf;
+  background: linear-gradient(to right, #92bbcf, #3d84a8);
 }
 
 .three {
-  background-color: #3d84a8;
+  background: linear-gradient(to right, #3d84a8, #166289);
 }
 
 .how-card-name {
   margin: 20px 0px 0px 0px;
+}
+
+.fundraise-for {
+  display: flex;
+  flex-direction: row;
+  justify-items: center;
+  --w: 1200px;
+  width: var(--w);
+  margin: 200px calc((100% - var(--w)) / 2);
+  justify-content: space-between;
+}
+
+.fundraise-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  & .section-name {
+    margin: 30px 0px 0px 0px;
+  }
+}
+
+.fundraise-for-button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #92bbcf;
+  background-color: #f0f7fa;
+  font-weight: 600;
+  font-size: medium;
+  width: 200px;
+  padding: 5px 10px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  &:hover {
+    transform: scale(1.1);
+    border: solid 1px #166289;
+    transition: all 0.9s ease-out;
+    color: #3d84a8;
+  }
+}
+
+.fundraiser-icon {
+  width: 150px;
+  margin: 40px 0px;
 }

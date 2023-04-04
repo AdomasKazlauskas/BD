@@ -5,7 +5,7 @@ function HowItWorks() {
     <>
       <div className="howItWorks-header">
         <h3 className="section-name">How it works</h3>
-        <h1 className="section-title">Easy like...</h1>
+        <h1 className="section-title">It's easy like...</h1>
       </div>
       <div className="howItWorks-card-list">
         <div className="howItWorks-card one">
