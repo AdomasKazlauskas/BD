@@ -3,6 +3,7 @@ import FundraiseFor from "./components/FundraiseFor";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
 import HowItWorks from "./components/HowItWorks";
+import LearnMore from "./components/LearnMore";
 
 function App() {
   return (
@@ -12,7 +13,7 @@ function App() {
       <HowItWorks />
       <FundraiseFor />
       <section>story list</section>
-      <section>learn more</section>
+      <LearnMore />
       <footer>footer</footer>
     </div>
   );
