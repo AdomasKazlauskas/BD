@@ -97,7 +97,7 @@
   justify-items: center;
   --w: 1200px;
   width: var(--w);
-  margin: 20px calc((100% - var(--w)) / 2);
+  margin: 20px calc((100% - var(--w)) / 2) 0px calc((100% - var(--w)) / 2);
   justify-content: space-between;
 }
 
@@ -302,27 +302,36 @@
     &:hover {
       border: 3px solid #166289;
       transition: all 0.9s ease-out;
-      cursor: pointer;
+    }
+    &:hover .topics-image {
+      transform: scale(1.05);
+      transition: 0.5s;
     }
     & .topics-image {
       width: 350px;
+      height: 185px;
     }
     & .topic-row-two {
       display: flex;
       flex-direction: row;
       justify-items: center;
       justify-content: space-between;
+      & .topic-card-name {
+        margin: 10px 0px;
+      }
       & .topic-row-two-money {
         display: flex;
-        flex-direction: column;
         justify-items: center;
         & h4 {
-          margin: 5px 0px;
+          margin: 10px 0px;
         }
       }
     }
     & .topic-text {
       font-weight: 400;
+      margin-top: 0px;
+      text-align: justify;
+      height: 210px;
     }
     & .topic-row-four {
       display: flex;
@@ -333,14 +342,52 @@
         display: flex;
         flex-direction: column;
         justify-items: center;
-        justify-content: space-between;
+        gap: 10px;
+        & input {
+          background-color: transparent;
+          border-bottom: 1px solid #166289;
+          border-top: none;
+          border-left: none;
+          border-right: none;
+        }
       }
       & .topic-row-four-buttons {
         display: flex;
         flex-direction: row;
         justify-items: center;
-        justify-content: space-between;
+        & .donation-button {
+          margin-left: 10px;
+          border-radius: 10px;
+          background-color: transparent;
+          border: 1px solid #166289;
+          cursor: pointer;
+          font-weight: bold;
+          &:hover {
+            transition: all 0.7s ease-out;
+            background-color: #166289;
+            color: #fff;
+          }
+        }
       }
     }
   }
+}
+
+.image-border {
+  position: relative;
+  overflow: hidden;
+}
+
+.image-border > img {
+  overflow: hidden;
+}
+
+.urgent-topics-card:hover .image-border > img {
+  transform: scale(1.05);
+  transition: 0.5s;
+}
+
+.urgent-topics-card .image-border > img {
+  max-width: 100%;
+  max-height: 100%;
 }
