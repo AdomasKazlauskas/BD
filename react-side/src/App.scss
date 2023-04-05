@@ -282,3 +282,65 @@
 .app-stores a img {
   width: 120px;
 }
+
+.urgent-topics-list {
+  display: flex;
+  flex-direction: row;
+  justify-items: center;
+  --w: 1200px;
+  width: var(--w);
+  margin: 20px calc((100% - var(--w)) / 2);
+  justify-content: space-between;
+  & .urgent-topics-card {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    padding: 20px 20px;
+    border-radius: 15px;
+    width: 350px;
+    border: 3px solid #fff;
+    &:hover {
+      border: 3px solid #166289;
+      transition: all 0.9s ease-out;
+      cursor: pointer;
+    }
+    & .topics-image {
+      width: 350px;
+    }
+    & .topic-row-two {
+      display: flex;
+      flex-direction: row;
+      justify-items: center;
+      justify-content: space-between;
+      & .topic-row-two-money {
+        display: flex;
+        flex-direction: column;
+        justify-items: center;
+        & h4 {
+          margin: 5px 0px;
+        }
+      }
+    }
+    & .topic-text {
+      font-weight: 400;
+    }
+    & .topic-row-four {
+      display: flex;
+      flex-direction: row;
+      justify-items: center;
+      justify-content: space-between;
+      & .topic-row-four-inputs {
+        display: flex;
+        flex-direction: column;
+        justify-items: center;
+        justify-content: space-between;
+      }
+      & .topic-row-four-buttons {
+        display: flex;
+        flex-direction: row;
+        justify-items: center;
+        justify-content: space-between;
+      }
+    }
+  }
+}

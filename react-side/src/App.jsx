@@ -5,6 +5,7 @@ import Header from "./components/Header";
 import Hero from "./components/Hero";
 import HowItWorks from "./components/HowItWorks";
 import LearnMore from "./components/LearnMore";
+import UrgentHelp from "./components/UrgentHelp";
 
 function App() {
   return (
@@ -12,7 +13,7 @@ function App() {
       <Header />
       <Hero />
       <HowItWorks />
-      <section>Urgent help needed</section>
+      <UrgentHelp />
       <FundraiseFor />
       <section>story list</section>
       <LearnMore />
