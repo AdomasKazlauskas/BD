@@ -1,4 +1,5 @@
 import "./App.scss";
+import Footer from "./components/Footer";
 import FundraiseFor from "./components/FundraiseFor";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
@@ -11,10 +12,11 @@ function App() {
       <Header />
       <Hero />
       <HowItWorks />
+      <section>Urgent help needed</section>
       <FundraiseFor />
       <section>story list</section>
       <LearnMore />
-      <footer>footer</footer>
+      <Footer />
     </div>
   );
 }

@@ -24,7 +24,7 @@ function LearnMore() {
           <a href="/">How to find a job</a>
           <a href="/">Today's economy</a>
           <a href="/">Chat GPT</a>
-          <a href="/">4th revolution</a>
+          <a href="/">The End times</a>
         </div>
         <div className="link-column">
           <h4 className="bold">Resources</h4>

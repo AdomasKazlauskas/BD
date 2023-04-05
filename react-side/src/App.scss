@@ -191,6 +191,7 @@
 
 .full-width {
   border-top: 1px solid #166289;
+  border-bottom: 1px solid #166289;
 }
 
 .learn-more {
@@ -200,6 +201,7 @@
   --w: 1200px;
   width: var(--w);
   margin: 25px calc((100% - var(--w)) / 2);
+  margin-bottom: 40px;
   justify-content: space-between;
   & .logotype {
     margin: 10px 0px 200px 0px;
@@ -229,4 +231,54 @@
     border: 1px solid #92bbcf;
     transition: all 0.5s ease-out;
   }
+}
+
+.footer {
+  display: flex;
+  flex-direction: row;
+  justify-items: center;
+  --w: 1200px;
+  width: var(--w);
+  margin: 45px calc((100% - var(--w)) / 2);
+  justify-content: space-between;
+  & .footer-terms {
+    display: flex;
+    flex-direction: row;
+    justify-items: center;
+    & h4 {
+      margin: 20px 0px;
+      font-weight: 100;
+    }
+    & a {
+      margin: 20px 20px;
+      text-decoration: none;
+    }
+  }
+  & .footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+.socials {
+  display: flex;
+  flex-direction: row;
+  justify-items: center;
+  justify-content: space-between;
+}
+
+.app-stores {
+  display: flex;
+  flex-direction: row;
+  justify-items: center;
+  gap: 10px;
+}
+
+.socials a img {
+  width: 20px;
+}
+
+.app-stores a img {
+  width: 120px;
 }
