@@ -5,6 +5,9 @@ import Header from "./components/Header";
 import Hero from "./components/Hero";
 import HowItWorks from "./components/HowItWorks";
 import LearnMore from "./components/LearnMore";
+import SignIn from "./components/SignIn";
+import SignUp from "./components/SignUp";
+import StoryList from "./components/StoryList";
 import UrgentHelp from "./components/UrgentHelp";
 
 function App() {
@@ -15,9 +18,11 @@ function App() {
       <HowItWorks />
       <UrgentHelp />
       <FundraiseFor />
-      <section>story list</section>
+      <StoryList />
       <LearnMore />
       <Footer />
+      {/* <SignUp />
+      <SignIn />*/}
     </div>
   );
 }
