@@ -1,18 +1,26 @@
 import "../App.scss";
 import logo from "../assets/logo.png";
+import { useNavigate } from "react-router-dom";
 
 function SignIn() {
+  const navigate = useNavigate();
+
   return (
     <div className="sign">
       <div className="sign-leftside">
-        <img className="logotype" src={logo} alt="logo" />
+        <img
+          className="logotype"
+          src={logo}
+          alt="logo"
+          onClick={() => navigate("/")}
+        />
         <h3 className="section-name">Welcome back</h3>
         <h1 className="section-title">Sign in to SendMeMoney</h1>
       </div>
       <div className="sign-rightside">
         <div className="rightside-top">
           <h4>
-            Don't have an account? <a href="/">Sign Up</a>
+            Don't have an account? <a href="/signUp">Sign Up</a>
           </h4>
         </div>
         <div className="rightside-details">

@@ -13,10 +13,12 @@ function Footer() {
     <div className="footer">
       <div className="footer-terms">
         <h4>&#169; 2023-2023 SendMeMoney</h4>
-        <a href="/">Terms</a>
-        <a href="/">Privacy</a>
-        <a href="/">Legal</a>
-        <a href="/">Acessibility Statement</a>
+        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Terms</a>
+        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Privacy</a>
+        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Legal</a>
+        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
+          Acessibility Statement
+        </a>
       </div>
       <div className="footer-links">
         <div className="socials">

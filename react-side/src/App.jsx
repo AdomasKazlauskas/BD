@@ -1,29 +1,38 @@
 import "./App.scss";
-import Footer from "./components/Footer";
-import FundraiseFor from "./components/FundraiseFor";
-import Header from "./components/Header";
-import Hero from "./components/Hero";
-import HowItWorks from "./components/HowItWorks";
-import LearnMore from "./components/LearnMore";
 import SignIn from "./components/SignIn";
 import SignUp from "./components/SignUp";
-import StoryList from "./components/StoryList";
-import UrgentHelp from "./components/UrgentHelp";
+import Homepage from "./components/Homepage";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { paths } from "./constants/routing";
+import AddStory from "./components/AddStory";
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <Homepage />,
+  },
+  {
+    path: paths.SIGNIN,
+    element: <SignIn />,
+  },
+  {
+    path: paths.SIGNUP,
+    element: <SignUp />,
+  },
+  {
+    path: paths.ADDSTORY,
+    element: <AddStory />,
+  },
+]);
 
 function App() {
   return (
-    <div>
-      <Header />
-      <Hero />
-      <HowItWorks />
-      <UrgentHelp />
-      <FundraiseFor />
-      <StoryList />
-      <LearnMore />
-      <Footer />
-      {/* <SignUp />
+    <>
+      {/* <Homepage /> */}
+      {/*<SignUp />
       <SignIn />*/}
-    </div>
+      <RouterProvider router={router} />
+    </>
   );
 }
 

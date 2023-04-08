@@ -5,7 +5,7 @@ import SadProgrammer3 from "../assets/SadProgrammer3.png";
 
 function UrgentHelp() {
   return (
-    <>
+    <div>
       <div className="howItWorks-header">
         <h3 className="section-name">Urgent help needed</h3>
         <h1 className="section-title">Featured topics</h1>
@@ -100,7 +100,7 @@ function UrgentHelp() {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 }
 
