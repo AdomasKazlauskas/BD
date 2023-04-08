@@ -11,7 +11,7 @@ function Header() {
       <img className="logotype" src={logo} alt="logo" />
       <div className="header-links">
         <button className="header-button">Log in</button>
-        <button className="header-button">Sign in</button>
+        <button className="header-button">Sign up</button>
       </div>
     </div>
   );

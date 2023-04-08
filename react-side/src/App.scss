@@ -19,6 +19,7 @@
 .logotype {
   width: 300px;
   margin: 0px 100px 0px 70px;
+  cursor: pointer;
 }
 
 .header-button {
@@ -413,8 +414,9 @@
       cursor: pointer;
       &:hover {
         border: 1px solid #166289;
-        background-color: #92bbcf;
+        background-color: #3d84a8;
         color: #f0f7fa;
+        transition: all 0.5s ease-out;
       }
     }
   }
