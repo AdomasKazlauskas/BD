@@ -5,6 +5,7 @@ import Homepage from "./components/Homepage";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { paths } from "./constants/routing";
 import AddStory from "./components/AddStory";
+import { GlobalContextProvider } from "./context/GlobalContext";
 
 const router = createBrowserRouter([
   {
@@ -27,12 +28,9 @@ const router = createBrowserRouter([
 
 function App() {
   return (
-    <>
-      {/* <Homepage /> */}
-      {/*<SignUp />
-      <SignIn />*/}
+    <GlobalContextProvider>
       <RouterProvider router={router} />
-    </>
+    </GlobalContextProvider>
   );
 }
 

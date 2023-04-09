@@ -1,9 +1,26 @@
 import "../App.scss";
 import logo from "../assets/logo.png";
 import { useNavigate } from "react-router-dom";
+import { createCard } from "../services/userService";
+import { useContext, useState } from "react";
+import { GlobalContext } from "../context/GlobalContext";
 
-function AddStory() {
+const AddStory = () => {
   const navigate = useNavigate();
+  const { setCardsStatus } = useContext(GlobalContext);
+
+  const [image, setImage] = useState("");
+  const [title, setTitle] = useState("");
+  const [totalCash, setTotalCash] = useState("");
+  const [text, setText] = useState("");
+
+  const handleCreateClick = async () => {
+    setCardsStatus("loading");
+    const payload = { image, title, totalCash, text };
+    await createCard(payload);
+    setCardsStatus("success");
+    navigate("/");
+  };
 
   return (
     <div className="sign">
@@ -24,24 +41,34 @@ function AddStory() {
             className="rightside-input"
             type="text"
             placeholder="Your Photo URL..."
+            onChange={(e) => setImage(e.target.value)}
+            value={image}
           />
           <input
             className="rightside-input"
             type="text"
             placeholder="Your Title..."
+            onChange={(e) => setTitle(e.target.value)}
+            value={title}
           />
           <input
             className="rightside-input"
-            type="text"
+            type="number"
             placeholder="Required sum..."
+            onChange={(e) => setTotalCash(e.target.value)}
+            value={totalCash}
           />
           <textarea
             className="rightside-input"
             type="text"
-            placeholder="Your Text..."
+            placeholder="Your story..."
             maxLength={200}
+            onChange={(e) => setText(e.target.value)}
+            value={text}
           />
-          <button className="post-btn">Post</button>
+          <button className="post-btn" onClick={handleCreateClick}>
+            Post
+          </button>
         </div>
         <div className="rightside-terms-post">
           <h4>
@@ -52,6 +79,6 @@ function AddStory() {
       </div>
     </div>
   );
-}
+};
 
 export default AddStory;

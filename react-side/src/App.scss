@@ -305,6 +305,7 @@
     border-radius: 15px;
     width: 350px;
     border: 3px solid #fff;
+    margin-bottom: 15px;
     &:hover {
       border: 3px solid #166289;
       transition: all 0.9s ease-out;
@@ -338,6 +339,7 @@
       margin-top: 0px;
       text-align: justify;
       height: 210px;
+      margin-bottom: 20px;
     }
     & .topic-row-four {
       display: flex;
@@ -579,7 +581,153 @@ textarea::placeholder {
 }
 
 .urgent-topics-list.scroll::-webkit-scrollbar-thumb {
-  background: #92bbcf;
+  background: #3d84a8;
   border-radius: 10px;
   border: 1px solid #166289;
+}
+
+.donors-list {
+  height: 210px;
+  overflow-y: scroll;
+  margin-bottom: 20px;
+  & .donors-list-item {
+    padding: 10px 0px;
+    font-weight: 500;
+  }
+}
+
+.donors-list::-webkit-scrollbar {
+  width: 20px;
+  border: 1px solid #166289;
+  border-radius: 10px;
+}
+
+.donors-list::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px #166289;
+  border-radius: 10px;
+}
+
+.donors-list::-webkit-scrollbar-thumb {
+  background: #3d84a8;
+  border-radius: 10px;
+  border: 1px solid #166289;
+}
+
+.completed {
+  background: linear-gradient(to right, #286692, #003153);
+}
+
+.urgent-topics-card.completed {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  padding: 20px 20px;
+  border-radius: 15px;
+  width: 350px;
+  border: 3px solid #fff;
+  margin-bottom: 15px;
+  & .donors-list {
+    height: 210px;
+    overflow-y: scroll;
+    margin-bottom: 20px;
+    &::-webkit-scrollbar {
+      width: 20px;
+      border: 1px solid #cfb53b;
+      border-radius: 10px;
+    }
+    &::-webkit-scrollbar-track {
+      box-shadow: inset 0 0 5px #cfb53b;
+      border-radius: 10px;
+    }
+    &::-webkit-scrollbar-thumb {
+      background: #cfb53b;
+      border-radius: 10px;
+      border: 1px solid #cfb53b;
+    }
+    & .donors-list-item {
+      padding: 10px 0px;
+      font-weight: 500;
+      color: #cfb53b;
+    }
+  }
+  & .topic-row-two {
+    display: flex;
+    flex-direction: row;
+    justify-items: center;
+    justify-content: space-between;
+    & .topic-card-name {
+      margin: 10px 0px;
+      color: #cfb53b;
+    }
+    & .topic-row-two-money {
+      display: flex;
+      justify-items: center;
+      & h4 {
+        margin: 10px 0px;
+        color: #cfb53b;
+      }
+    }
+  }
+  & .topic-text {
+    font-weight: 400;
+    margin-top: 0px;
+    text-align: justify;
+    height: 210px;
+    margin-bottom: 20px;
+    color: #cfb53b;
+  }
+  &:hover {
+    border: 3px solid #cfb53b;
+    transition: all 0.9s ease-out;
+  }
+  & .topic-row-four {
+    display: flex;
+    flex-direction: row;
+    justify-items: center;
+    justify-content: space-between;
+    & .topic-row-four-inputs {
+      display: flex;
+      flex-direction: column;
+      justify-items: center;
+      gap: 10px;
+      & input {
+        background-color: transparent;
+        border-bottom: 1px solid #cfb53b;
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        &::placeholder {
+          color: #cfb53b;
+        }
+      }
+    }
+    & .topic-row-four-buttons {
+      display: flex;
+      flex-direction: row;
+      justify-items: center;
+      & .donation-button {
+        margin-left: 10px;
+        border-radius: 10px;
+        background-color: transparent;
+        border: 1px solid #cfb53b;
+        cursor: pointer;
+        font-weight: bold;
+        color: #cfb53b;
+        &:disabled {
+          cursor: default;
+          &:hover {
+            background-color: transparent;
+            border: 1px solid #cfb53b;
+            color: #cfb53b;
+          }
+        }
+        &:hover {
+          background-color: #cfb53b;
+          color: #003153;
+          border: 1px solid #003153;
+          transition: all 0.9s ease-out;
+        }
+      }
+    }
+  }
 }

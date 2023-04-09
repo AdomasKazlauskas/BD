@@ -5,21 +5,21 @@ import Hero from "./Hero";
 import HowItWorks from "./HowItWorks";
 import LearnMore from "./LearnMore";
 import StoryList from "./StoryList";
-import UrgentHelp from "./UrgentHelp";
+import UrgentHelpList from "./UrgentHelpList";
 
-function Homepage() {
+const Homepage = () => {
   return (
     <>
       <Header />
       <Hero />
       <HowItWorks />
-      <UrgentHelp />
+      <UrgentHelpList />
       <FundraiseFor />
       <StoryList />
       <LearnMore />
       <Footer />
     </>
   );
-}
+};
 
 export default Homepage;
