@@ -1,9 +1,45 @@
+import axios from "axios";
 import "../App.scss";
 import logo from "../assets/logo.png";
 import { useNavigate } from "react-router-dom";
+import { GlobalContext } from "../context/GlobalContext";
+import { useContext, useState } from "react";
 
 function SignUp() {
   const navigate = useNavigate();
+  const { setAuthName } = useContext(GlobalContext);
+  const [name, setName] = useState("");
+  const [password, setPassword] = useState("");
+  const [error, setError] = useState(false);
+
+  const signUp = () => {
+    axios
+      .post(
+        "http://localhost:3003/signUp",
+        { name, password },
+        {
+          withCredentials: true,
+          headers: {
+            "Content-Type": "application/x-www-form-urlencoded",
+          },
+        }
+      )
+      .then((res) => {
+        console.log(res.data);
+        if (res.data.status === "ok") {
+          // setUsername(res.data.name);
+          // setName("");
+          // setPassword("");
+          setAuthName(res.data.name);
+          navigate("/");
+        } else {
+          // setUsername(null);
+        }
+        if (res.data.status === "Already taken") {
+          setError(true);
+        }
+      });
+  };
 
   return (
     <div className="sign">
@@ -29,19 +65,30 @@ function SignUp() {
             className="rightside-input"
             type="text"
             placeholder="Your Name..."
+            value={name}
+            onChange={(event) => setName(event.target.value)}
           />
           <input
             className="rightside-input"
-            type="text"
+            type="password"
             placeholder="Your Password..."
+            value={password}
+            onChange={(event) => setPassword(event.target.value)}
           />
+          {error ? (
+            <span className="error-message">
+              Username is already taken. Be more creative.
+            </span>
+          ) : null}
         </div>
         <div className="rightside-terms">
           <h4>
             By continuing, you agree with the SendMeMoney{" "}
             <a href="/">terms of service</a> and have no way back.
           </h4>
-          <button className="terms-btn">Sign Up</button>
+          <button className="terms-btn" onClick={signUp}>
+            Sign Up
+          </button>
         </div>
       </div>
     </div>

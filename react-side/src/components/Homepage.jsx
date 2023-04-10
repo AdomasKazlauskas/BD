@@ -1,3 +1,4 @@
+import { useAuthorization } from "../hooks/useAuthorization";
 import Footer from "./Footer";
 import FundraiseFor from "./FundraiseFor";
 import Header from "./Header";
@@ -8,6 +9,8 @@ import StoryList from "./StoryList";
 import UrgentHelpList from "./UrgentHelpList";
 
 const Homepage = () => {
+  useAuthorization();
+
   return (
     <>
       <Header />

@@ -3,8 +3,7 @@ const cors = require("cors");
 const cookieParser = require("cookie-parser");
 const fs = require("fs");
 const { v4: uuidv4 } = require("uuid");
-const { log } = require("console");
-// const md5 = require("md5");
+const md5 = require("md5");
 
 const app = express();
 const port = 3003;
@@ -23,6 +22,88 @@ app.use(
     extended: true,
   })
 );
+
+app.post("/cookie", (req, res) => {
+  if (req.body.delete) {
+    res.cookie("cookieMonster", "", { maxAge: -3600 });
+  } else {
+    res.cookie("cookieMonster", req.body.text, { maxAge: 3600 });
+  }
+  res.json({ msg: "OK" });
+});
+
+app.post("/signUp", (req, res) => {
+  console.log(req.body);
+  const logins = JSON.parse(fs.readFileSync("./data/logins.json", "utf8"));
+  const name = req.body.name;
+  const password = md5(req.body.password);
+
+  const checkUser = logins.find((l) => l.name === name);
+
+  if (checkUser) {
+    res.json({ status: "Already taken", message: "User already exists" });
+    return;
+  }
+  const session = md5(uuidv4());
+
+  logins.push({
+    name,
+    password,
+    session,
+  });
+
+  fs.writeFileSync("./data/logins.json", JSON.stringify(logins), "utf8");
+  res.cookie("magicNumberSession", session);
+  res.json({ status: "ok", name });
+});
+
+app.post("/login", (req, res) => {
+  console.log(req.body);
+  const logins = JSON.parse(fs.readFileSync("./data/logins.json", "utf8"));
+  const name = req.body.name;
+  const password = md5(req.body.password);
+
+  const checkUser = logins.find(
+    (l) => l.name === name && l.password === password
+  );
+
+  if (checkUser) {
+    const sessionId = md5(uuidv4());
+    checkUser.session = sessionId;
+
+    fs.writeFileSync("./data/logins.json", JSON.stringify(logins), "utf8");
+    res.cookie("magicNumberSession", sessionId);
+    res.json({ status: "ok", name: checkUser.name });
+  } else {
+    res.json({ status: "error" });
+  }
+});
+
+app.get("/login", (req, res) => {
+  const logins = JSON.parse(fs.readFileSync("./data/logins.json", "utf8"));
+
+  const checkUser = req.cookies.magicNumberSession
+    ? logins.find((l) => l.session === req.cookies.magicNumberSession)
+    : null;
+
+  if (checkUser) {
+    res.json({
+      status: "ok",
+      name: checkUser.name,
+    });
+  } else {
+    res.json({
+      status: "error",
+    });
+  }
+});
+
+app.post("/logout", (req, res) => {
+  res.cookie("magicNumberSession", "", { maxAge: -3600 });
+  res.json({
+    status: "logout",
+  });
+});
 
 app.use(express.json());
 
