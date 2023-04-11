@@ -749,10 +749,11 @@ textarea::placeholder {
 
 .error-message {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   color: red;
   font-weight: 500;
+  margin: 10px 100px;
 }
 
 .author-name {

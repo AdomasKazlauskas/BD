@@ -76,9 +76,9 @@ function SignUp() {
             onChange={(event) => setPassword(event.target.value)}
           />
           {error ? (
-            <span className="error-message">
+            <h4 className="error-message">
               Username is already taken. Be more creative.
-            </span>
+            </h4>
           ) : null}
         </div>
         <div className="rightside-terms">
