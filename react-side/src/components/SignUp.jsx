@@ -84,7 +84,10 @@ function SignUp() {
         <div className="rightside-terms">
           <h4>
             By continuing, you agree with the SendMeMoney{" "}
-            <a href="/">terms of service</a> and have no way back.
+            <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
+              terms of service
+            </a>{" "}
+            and have no way back.
           </h4>
           <button className="terms-btn" onClick={signUp}>
             Sign Up

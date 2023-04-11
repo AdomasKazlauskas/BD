@@ -22,30 +22,30 @@ function Footer() {
       </div>
       <div className="footer-links">
         <div className="socials">
-          <a href="/">
+          <a href="https://www.facebook.com/">
             <img src={Facebook} alt="Facebook" />
           </a>
-          <a href="/">
+          <a href="https://www.instagram.com/">
             <img src={Instagram} alt="Instagram" />
           </a>
-          <a href="/">
+          <a href="https://www.linkedin.com/in/adomas-kazlauskas/">
             <img src={LinkedIn} alt="LinkedIn" />
           </a>
-          <a href="/">
+          <a href="https://www.whatsapp.com/">
             <img src={Whatsapp} alt="Whatsapp" />
           </a>
-          <a href="/">
+          <a href="https://twitter.com/">
             <img src={Twitter} alt="Twitter" />
           </a>
-          <a href="/">
+          <a href="https://www.youtube.com/">
             <img src={Youtube} alt="Youtube" />
           </a>
         </div>
         <div className="app-stores">
-          <a href="/">
+          <a href="https://play.google.com/store/games?device=windows&pli=1">
             <img src={GooglePlay} alt="GooglePlay" />
           </a>
-          <a href="/">
+          <a href="https://www.apple.com/app-store/">
             <img src={AppStore} alt="AppStore" />
           </a>
         </div>
